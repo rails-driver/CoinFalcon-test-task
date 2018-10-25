@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  web:
+    build: docker/ruby
+    links:
+    - db
+    volumes:
+    - ./:/var/www
+    - ./docker/data/bundle:/usr/local/bundle/
+    ports:
+    - 3000:3000
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db/postgres
+    tty: true
+
+  db:
+    image: postgres:10-alpine
+    ports:
+    - 5432:5432
