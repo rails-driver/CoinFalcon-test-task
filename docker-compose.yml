@@ -12,9 +12,14 @@ services:
     - 3000:3000
     environment:
       DATABASE_URL: postgresql://postgres:postgres@db/postgres
+      TEST_DATABASE_URI: postgresql://postgres:postgres@db/testing
+      REDIS_URL: redis://redis:6379
     tty: true
 
   db:
     image: postgres:10-alpine
     ports:
     - 5432:5432
+
+  redis:
+    image: redis:5-alpine

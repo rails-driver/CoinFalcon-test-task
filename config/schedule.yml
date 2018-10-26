@@ -1,0 +1,5 @@
+generate_address:
+  name: 'Generate new address'
+  cron: "* * * * *"
+  class: GenerateAddressWorker
+  queue: default
