@@ -47,6 +47,9 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 1.0.4'
 
+# API documentation
+gem 'apipie-rails'
+
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
   gem 'factory_bot_rails'

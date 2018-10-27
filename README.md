@@ -19,3 +19,6 @@ Run tests
 ```bash
 docker-compose exec web sh -c 'rspec'
 ```
+
+### API documentation
+Please visit `http://localhost:3000/apipie` to see documentation.
